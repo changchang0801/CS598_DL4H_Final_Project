@@ -250,7 +250,14 @@ class ExperimentTemplate(PytorchExperiment):
                 diagnoses = None
             else:
                 padded, mask, diagnoses, flat, los_labels, mort_labels, seq_lengths = batch
-
+            # added this line on 03232023 to fix the bug when last batch in test size is 1 (using seq_lenghts)
+            if batch[-1].size(dim=0) == 1: 
+                continue
+            # print("padded size", padded.size())
+            # print("mask size", mask.size())
+            # print("los_labels size", los_labels.size())
+            # print("padded mort_labels", mort_labels.size())
+            # print("seq_lengths size", seq_lengths.size())
             y_hat_los, y_hat_mort = self.model(padded, diagnoses, flat)
             loss = self.model.loss(y_hat_los, y_hat_mort, los_labels, mort_labels, mask, seq_lengths, self.device,
                                    self.config.sum_losses, self.config.loss)

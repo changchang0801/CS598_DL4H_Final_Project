@@ -19,6 +19,7 @@ def initialise_arguments():
                                                                   'results on the training and validation sets each '
                                                                   'epoch, or test, which just runs all the epochs and '
                                                                   'only reports on the test set')
+    # parser.add_argument('--model_type', default='tpc', type=str) # mannualy added model type as a paramter here； commented out on 0322 as     will case problem with other models!!!
 
     # loss
     parser.add_argument('--loss', default='msle', type=str, help='can either be msle or mse')
