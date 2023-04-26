@@ -160,9 +160,12 @@ Intrigued by the surprising finding that the exclusion of diagnosis codes as inp
     ```
     python3 -m models.final_experiment_scripts.eICU.LoS.tpc
     ```
+
     
 ## References
-Emma Rocheteau, Pietro Li `o, and Stephanie Hyland. 2021. Temporal pointwise convolutional networks for length of stay prediction in the intensive care unit. In Proceedings of the conference on health, inference, and learning, pages 58–68.
+
+Original Paper: Emma Rocheteau, Pietro Li `o, and Stephanie Hyland. 2021. Temporal pointwise convolutional networks for length of stay prediction in the intensive care unit. In Proceedings of the conference on health, inference, and learning, pages 58–68.
+Github Repo: https://github.com/EmmaRocheteau/TPC-LoS-prediction
 
 Hrayr Harutyunyan, Hrant Khachatrian, David C. Kale, Greg Ver Steeg, and Aram Galstyan. Multitask Learning and Benchmarking with Clinical Time Series Data. Scientific Data, 6(96), 2019.
 
